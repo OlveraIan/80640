@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            box-shadow: 0px 5px 10px 0 rgb(70, 63, 80);
+        }
+        figure{
+            text-align: center;
+            width: 200px;
+            display: inline-block;
+        }
+    </style>
+    
+    <title>Titulo</title>
+    
+</head>
+
+<Header>
+    
+</Header>
+<body>
+    <h1>Imagenes Aleatorias</h1>
+    <div id="app"></div>
+    <figure>
+    <img src="https://picsum.photos/id/1/200/200" alt="">
+        <figcaption>John</figcaption>
+    </figure>
+    <figure>
+        <img src="https://picsum.photos/id/2/200">
+        <figcaption>John</figcaption>
+    </figure>
+    
+    <script>
+        const app = document.getElementById("app");
+        const url = "https://picsum.photos/id/";
+        const size = "/200/200";
+        const Picture = (parametros) =>{
+            let src= url+parametros+size
+            console.log(src)
+            return
+            <figure>
+                <img src="$(src)"/>
+                <figcaption>John</figcaption>
+            </figure> ;
+        }
+        app.innerHTML = Picture(10);
+        app.innerHTML += Picture(21);
+    </script>
+</body>
+</html>
